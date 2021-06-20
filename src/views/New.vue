@@ -1,39 +1,22 @@
 <template>
-  <form class="card"
-  @submit.prevent="submit"
-  >
+  <form class="card" @submit.prevent="submit">
     <h1>Создать новую задачу</h1>
     <div class="form-control">
       <label for="title">Название</label>
-      <input 
-      type="text" 
-      id="title"
-      v-model="title"
-      >
+      <input type="text" id="title" v-model="title">
     </div>
 
     <div class="form-control">
       <label for="date">Дата дэдлайна</label>
-      <input 
-      type="date" 
-      id="date"
-      v-model="date"
-      >
+      <input type="date" id="date" v-model="date">
     </div>
 
     <div class="form-control">
       <label for="description">Описание</label>
-      <textarea 
-      id="description"
-      v-model="description"
-      ></textarea>
+      <textarea id="description" v-model="description"></textarea>
     </div>
 
-    <button 
-    class="btn primary" 
-    @click="addNew" 
-    :disabled="!isValid"
-    >Создать</button>
+    <button class="btn primary" :disabled="!isValid">Создать</button>
   </form>
 </template>
 
